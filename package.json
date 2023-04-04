@@ -11,8 +11,8 @@
     "seed:contentful": "dotenv-run-script .env -- import:contentful",
     "seed": "medusa seed -f ./data/seed.json",
     "build": "babel src -d dist --extensions \".ts,.js\"",
-    "start": "medusa develop",
-    "dev": "medusa start"
+    "start": "medusa start",
+    "dev": "medusa develop"
   },
   "dependencies": {
     "@medusajs/admin": "^1.0.0-ci-issue-20230322190222",
