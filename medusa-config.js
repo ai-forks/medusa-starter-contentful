@@ -36,9 +36,22 @@ const plugins = [
     resolve: "@medusajs/admin",
     options: {
       path: "app", //访问路径
-      serve: true,//是否为管理仪表板提供服务。	
+      serve: true, //是否为管理仪表板提供服务。
     },
   },
+  // add github info
+ /*  {
+    resolve: `medusa-file-github`,
+    options: {
+      owner: "bentrynning",
+      repo: "medusa",
+      path: "public",
+      // this is the path to the folder where your assets live
+      cdn_url: "https://cdn.jsdelivr.net/gh",
+      github_token: "YOUR-FINE-GRAINED-GITHUBTOKEN",
+      // process.env.GITHUB_TOKEN
+    },
+  }, */
   // Uncomment to add Stripe support.
   // You can create a Stripe account via: https://stripe.com
   // {
