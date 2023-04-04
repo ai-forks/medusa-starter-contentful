@@ -32,6 +32,13 @@ const plugins = [
       environment: CONTENTFUL_ENV,
     },
   },
+  {
+    resolve: "@medusajs/admin",
+    options: {
+      path: "app", //访问路径
+      serve: true,//是否为管理仪表板提供服务。	
+    },
+  },
   // Uncomment to add Stripe support.
   // You can create a Stripe account via: https://stripe.com
   // {
