@@ -3,23 +3,26 @@
 You may define custom services that will be registered on the global container by creating files in the `/services` directory that export an instance of `BaseService`.
 
 ```js
-// my.js
+import { ProductService, TransactionBaseService } from "@medusajs/medusa"
+import { EntityManager } from "typeorm"
 
-import { BaseService } from "medusa-interfaces";
+class DemoService extends TransactionBaseService {
+  protected manager_: EntityManager
+  protected transactionManager_: EntityManager
+  private productService: ProductService
 
-class MyService extends BaseService {
-  constructor({ productService }) {
-    super();
-
-    this.productService_ = productService
+  constructor(container) {
+    super(container)
+    this.productService = container.productService
   }
-
-  async getProductMessage() {
-    const [product] = await this.productService_.list({}, { take: 1 })
-
-    return `Welcome to ${product.title}!`
+  async getMessage() {
+    let count = await this.productService.count();
+    return `Welcome to My Store! count=[${count}]`
   }
 }
+
+
+export default DemoService;
 ```
 
 The first argument to the `constructor` is the global giving you access to easy dependency injection. The container holds all registered services from the core, installed plugins and from other files in the `/services` directory. The registration name is a camelCased version of the file name with the type appended i.e.: `my.js` is registered as `myService`, `custom-thing.js` is registerd as `customThingService`.
@@ -27,17 +30,21 @@ The first argument to the `constructor` is the global giving you access to easy 
 You may use the services you define here in custom endpoints by resolving the services defined.
 
 ```js
-import { Router } from "express"
+import { Router } from "express";
+import DemoService from "../services/demo";
 
-export default () => {
-  const router = Router()
-
-  router.get("/hello-product", async (req, res) => {
-    const myService = req.scope.resolve("myService")
-
+console.info("============ api demo");
+export default (router: Router) => {
+  //const router = Router();
+  router.get("/demo", async (req, res) => {
+    const demoService: DemoService = req.scope.resolve("demoService");
+    let msg = await demoService.getMessage();
     res.json({
-      message: await myService.getProductMessage()
-    })
-  })
-}
+      message: "Welcome to Medusa!",
+      m1: "oggg",
+      msg,
+    });
+  });
+};
+
 ```

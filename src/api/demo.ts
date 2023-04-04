@@ -1,5 +1,5 @@
 import { Router } from "express";
-import DemoService from "../services/demo.service";
+import DemoService from "../services/demo";
 
 console.info("============ api demo");
 export default (router: Router) => {
