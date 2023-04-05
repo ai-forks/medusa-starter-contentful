@@ -3560,13 +3560,6 @@ axios-retry@^3.1.9:
     "@babel/runtime" "^7.15.4"
     is-retry-allowed "^2.2.0"
 
-axios@^0.19.0:
-  version "0.19.2"
-  resolved "https://registry.npmmirror.com/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
-  integrity sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
-  dependencies:
-    follow-redirects "1.5.10"
-
 axios@^0.21.0, axios@^0.21.1, axios@^0.21.4:
   version "0.21.4"
   resolved "https://registry.npmmirror.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
@@ -4461,16 +4454,6 @@ contentful-management@^10.0.0, contentful-management@^10.31.5:
     lodash.isplainobject "^4.0.6"
     type-fest "^3.0.0"
 
-contentful-management@^5.27.1:
-  version "5.28.0"
-  resolved "https://registry.npmmirror.com/contentful-management/-/contentful-management-5.28.0.tgz#f3b58d60400d66e42439bbd9085cecb0e486f0bb"
-  integrity sha512-o+qihN3zrD6+/BT/e8n26jl/zQvmV6+9S6NY5QDmzM+IaiSeCk6yvPMq74s+IZT9mOS54igl6qFTbeIpdJ9FDA==
-  dependencies:
-    axios "^0.19.0"
-    contentful-sdk-core "^6.4.0"
-    lodash "^4.17.11"
-    type-fest "0.15.1"
-
 contentful-management@^7.51.5:
   version "7.54.2"
   resolved "https://registry.npmmirror.com/contentful-management/-/contentful-management-7.54.2.tgz#7778b3094ea409732a7809839c118f0b8eb3e156"
@@ -4512,7 +4495,7 @@ contentful-resolve-response@^1.3.12:
   dependencies:
     fast-copy "^2.1.7"
 
-contentful-sdk-core@^6.10.4, contentful-sdk-core@^6.4.0:
+contentful-sdk-core@^6.10.4:
   version "6.11.0"
   resolved "https://registry.npmmirror.com/contentful-sdk-core/-/contentful-sdk-core-6.11.0.tgz#0e2bf5a7270ac1f8937ae49e798bee614e20d087"
   integrity sha512-ukKxiiHdCa/izTQbA3/VUPMQB2PZW5D2KYjV9WQVOc8QjmDhu1wpEDkYxYjOrUDgT5tM7xw6umpwlifxoYe9kQ==
@@ -4707,7 +4690,7 @@ debug@2.6.9, debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@3.1.0, debug@=3.1.0:
+debug@3.1.0:
   version "3.1.0"
   resolved "https://registry.npmmirror.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   integrity sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
@@ -5415,13 +5398,6 @@ fn.name@1.x.x:
   version "1.1.0"
   resolved "https://registry.npmmirror.com/fn.name/-/fn.name-1.1.0.tgz#26cad8017967aea8731bc42961d04a3d5988accc"
   integrity sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==
-
-follow-redirects@1.5.10:
-  version "1.5.10"
-  resolved "https://registry.npmmirror.com/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
-  integrity sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
-  dependencies:
-    debug "=3.1.0"
 
 follow-redirects@^1.14.0, follow-redirects@^1.14.4, follow-redirects@^1.14.9:
   version "1.15.2"
@@ -6652,7 +6628,7 @@ lodash.startcase@^4.4.0:
   resolved "https://registry.npmmirror.com/lodash.startcase/-/lodash.startcase-4.4.0.tgz#9436e34ed26093ed7ffae1936144350915d9add8"
   integrity sha512-+WKqsK294HMSc2jEbNgpHpd0JfIBhp7rEV4aqXWqFr6AlXov+SlcgB1Fv01y2kGe3Gc8nMW7VA0SrGuSkRfIEg==
 
-lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.15, lodash@^4.17.21, lodash@^4.3.0:
+lodash@^4.17.10, lodash@^4.17.15, lodash@^4.17.21, lodash@^4.3.0:
   version "4.17.21"
   resolved "https://registry.npmmirror.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -6849,19 +6825,6 @@ medusa-payment-stripe@^1.1.23:
     medusa-core-utils "^1.1.39"
     stripe "^8.50.0"
 
-medusa-plugin-contentful@^1.1.25:
-  version "1.2.7"
-  resolved "https://registry.npmmirror.com/medusa-plugin-contentful/-/medusa-plugin-contentful-1.2.7.tgz#9ffe22082e27a117384e683faa3773994d04c3db"
-  integrity sha512-CwvFxZXur4dOdF90fvCEk1QSDnC7szFV4zi6ioCuMorUid0TIATfB+eZVBjEopNWfJwf6rZGm7TECiREK3679Q==
-  dependencies:
-    "@babel/plugin-transform-classes" "^7.9.5"
-    body-parser "^1.19.0"
-    contentful-management "^5.27.1"
-    express "^4.17.1"
-    medusa-core-utils "^1.1.39"
-    medusa-test-utils "^1.1.37"
-    redis "^3.0.2"
-
 medusa-react@5.0.0-ci-issue-20230322190222:
   version "5.0.0-ci-issue-20230322190222"
   resolved "https://registry.npmmirror.com/medusa-react/-/medusa-react-5.0.0-ci-issue-20230322190222.tgz#b0cab7909082cb287c810ecac92d8114f6a71227"
@@ -6884,7 +6847,7 @@ medusa-telemetry@0.0.16, medusa-telemetry@^0.0.16:
     remove-trailing-slash "^0.1.1"
     uuid "^8.3.2"
 
-medusa-test-utils@^1.1.37, medusa-test-utils@^1.1.40:
+medusa-test-utils@^1.1.40:
   version "1.1.40"
   resolved "https://registry.npmmirror.com/medusa-test-utils/-/medusa-test-utils-1.1.40.tgz#9a0b8510125046f87a2128bf1b846eff4f834c02"
   integrity sha512-C58LFoto508WTM1a9OO+8FWV4rAaXwaHtl+i5xpn9MNCAwYK/CJlHyVNiVJ96J6J5i8GCkmSo0IOTnW5Rsjgmg==
@@ -9337,11 +9300,6 @@ tslib@^2.0.0, tslib@^2.0.1, tslib@^2.0.3, tslib@^2.1.0, tslib@^2.3.1, tslib@^2.4
   version "2.5.0"
   resolved "https://registry.npmmirror.com/tslib/-/tslib-2.5.0.tgz#42bfed86f5787aeb41d031866c8f402429e0fddf"
   integrity sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==
-
-type-fest@0.15.1:
-  version "0.15.1"
-  resolved "https://registry.npmmirror.com/type-fest/-/type-fest-0.15.1.tgz#d2c4e73d3e4a53cf1a906396dd460a1c5178ca00"
-  integrity sha512-n+UXrN8i5ioo7kqT/nF8xsEzLaqFra7k32SEsSPwvXVGyAcRgV/FUQN/sgfptJTR1oRmmq7z4IXMFSM7im7C9A==
 
 type-fest@^0.20.2:
   version "0.20.2"

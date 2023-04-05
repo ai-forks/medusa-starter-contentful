@@ -7,9 +7,6 @@
   "scripts": {
     "migrations": "medusa migrations run",
     "build:admin": "medusa-admin build",
-    "migrate:contentful": "./contentful-migrations/index.js",
-    "import:contentful": "contentful space import --space-id $CONTENTFUL_SPACE_ID --mt $CONTENTFUL_ACCESS_TOKEN --content-file  ./data/contentful-seed.json",
-    "seed:contentful": "dotenv-run-script .env -- import:contentful",
     "seed": "medusa seed -f ./data/seed.json",
     "build": "babel src -d dist --extensions \".ts,.js\"",
     "start": "medusa start",
@@ -24,7 +21,6 @@
     "medusa-interfaces": "^1.1.21",
     "medusa-payment-manual": "^1.0.2",
     "medusa-payment-stripe": "^1.1.23",
-    "medusa-plugin-contentful": "^1.1.25",
     "mongoose": "^5.13.3",
     "typeorm": "^0.2.36"
   },

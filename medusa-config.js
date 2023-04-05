@@ -25,14 +25,6 @@ const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
   {
-    resolve: `medusa-plugin-contentful`,
-    options: {
-      space_id: CONTENTFUL_SPACE_ID,
-      access_token: CONTENTFUL_ACCESS_TOKEN,
-      environment: CONTENTFUL_ENV,
-    },
-  },
-  {
     resolve: "@medusajs/admin",
     options: {
       path: "app", //访问路径
